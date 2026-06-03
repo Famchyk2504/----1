@@ -1,0 +1,143 @@
+﻿<Window x:Class="WpfTextEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTextEditor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <DockPanel>
+
+        <Menu DockPanel.Dock="Top">
+
+            <MenuItem Header="_Файл">
+
+                <MenuItem Header="Новий"
+                      Name="miNew"
+                      Click="miNew_Click"/>
+
+                <MenuItem Header="Відкрити"
+                      Name="miOpen"
+                      Click="miOpen_Click"/>
+
+                <MenuItem Header="Зберегти"
+                      Name="miSave"
+                      Click="miSave_Click"/>
+
+                <Separator/>
+
+                <MenuItem Header="Вихід"
+                      Click="miExit_Click"/>
+
+            </MenuItem>
+
+            <MenuItem Header="_Формат">
+
+                <MenuItem Header="Вирівняти ліворуч"
+                      Click="AlignLeft_Click"/>
+
+                <MenuItem Header="По центру"
+                      Click="AlignCenter_Click"/>
+
+                <MenuItem Header="Вирівняти праворуч"
+                      Click="AlignRight_Click"/>
+
+            </MenuItem>
+
+            <MenuItem Header="_Вставка">
+
+                <MenuItem Header="Зображення"
+                      Click="InsertImage_Click"/>
+
+            </MenuItem>
+
+            <MenuItem Header="_Мова">
+
+                <MenuItem Header="Українська"
+                      Click="Ua_Click"/>
+
+                <MenuItem Header="English"
+                      Click="En_Click"/>
+
+            </MenuItem>
+
+        </Menu>
+
+        <ToolBarTray DockPanel.Dock="Top">
+
+            <ToolBar>
+
+                <Button Name="btnNew"
+                    Content="Новий"
+                    Click="miNew_Click"/>
+
+                <Button Name="btnOpen"
+                    Content="Відкрити"
+                    Click="miOpen_Click"/>
+
+                <Button Name="btnSave"
+                    Content="Зберегти"
+                    Click="miSave_Click"/>
+
+                <Separator/>
+
+                <ToggleButton Name="btnBold"
+              Content="Ж"
+              Width="30"
+              Click="btnBold_Click"/>
+
+                <ToggleButton Name="btnItalic"
+              Content="К"
+              Width="30"
+              Click="btnItalic_Click"/>
+
+                <ToggleButton Name="btnUnderline"
+              Content="П"
+              Width="30"
+              Click="btnUnderline_Click"/>
+
+                <Separator/>
+
+                <ComboBox Name="cmbFontFamily"
+                       Width="180"
+                       SelectionChanged="cmbFontFamily_SelectionChanged"/>
+
+                <ComboBox Name="cmbFontSize"
+                       Width="70"
+                       SelectionChanged="cmbFontSize_SelectionChanged"/>
+
+                <Separator/>
+
+                <Button Content="←"
+                    Width="30"
+                    Click="AlignLeft_Click"/>
+
+                <Button Content="↔"
+                    Width="30"
+                    Click="AlignCenter_Click"/>
+
+                <Button Content="→"
+                    Width="30"
+                    Click="AlignRight_Click"/>
+
+            </ToolBar>
+
+        </ToolBarTray>
+
+
+        <StatusBar DockPanel.Dock="Bottom">
+
+            <TextBlock Name="txtStatus">
+            Готово
+            </TextBlock>
+
+        </StatusBar>
+
+        <TabControl Name="tabDocuments">
+
+        </TabControl>
+
+    </DockPanel>
+
+</Window>
