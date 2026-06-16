@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="MythologicalCharacters/MythologicalCharacters.csproj" Id="ed14af62-66df-454f-8bbb-9c432736437a">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+</Solution>
